@@ -43,7 +43,7 @@ let list = [
 { type: "desktop",	  text: _("Software Center"), action: 'org.gnome.Software.desktop'},
 { type: "separator"},
 { type: "command",	   text: _("System Preferences"), action: ['gnome-control-center', '']},
-{ type: "desktop",	   text: _("Gnome Tweak Tool"), action: 'org.gnome.tweaks.desktop'},
+{ type: "desktop",	   text: _("Terminal"), action: 'org.gnome.Terminal.desktop'},
 { type: "separator"},
 { type: "desktop",	   text: _("System Monitor"), action: 'gnome-system-monitor.desktop'},
 { type: "forceQuit",   text: _("Force Quit"), action: ''},
@@ -65,7 +65,7 @@ const extensionObject = new Lang.Class({
 		this.forceQuitPtr = null;
 		this.forceQuitPids = null;
 
-		let icon = new St.Icon({ icon_name: 'emblem-default-symbolic',
+		let icon = new St.Icon({ icon_name: 'open-menu-symbolic',
 					 style_class: 'system-status-icon' });
 		let label = new St.Label({ text: "" });
 		this.parent(0.0, label.text);
